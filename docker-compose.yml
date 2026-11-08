@@ -1,0 +1,17 @@
+
+services:
+  # Cau hinh PostgreSQL
+  postgre_db:
+   image: postgres:latest
+   container_name: postgres-canhan
+   environment:
+     POSTGRES_USER: quang_hieu1605
+     POSTGRES_PASSWORD: 12345678
+     POSTGRES_DB: quang_hieu1605
+   ports:
+     - "5433:5432"
+   volumes:
+      - postgres_data:/var/lib/postgresql/data
+   restart: always
+volumes:
+  postgres_data:

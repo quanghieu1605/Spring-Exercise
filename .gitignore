@@ -1,0 +1,49 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+### Docker & Databases ###
+# Chặn các file cấu hình môi trường chứa mật khẩu, secret key
+.env
+*.env
+
+# Chặn thư mục chứa dữ liệu vật lý của Database nếu bạn mount ổ đĩa ngoài trong docker-compose
+/data/
+**/db_data/
+
+### OS Files ###
+.DS_Store
+Thumbs.db
