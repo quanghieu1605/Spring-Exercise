@@ -1,3 +1,4 @@
+package com.springmasterclass.study.service.impl;
 import com.springmasterclass.study.dto.record.PatientResponseDTO;
 import com.springmasterclass.study.entity.Checkup;
 import com.springmasterclass.study.entity.Patient;
@@ -17,7 +18,7 @@ public class IPatientServiceImpl implements PatientService {
     @Transactional(readOnly = true)
     public List<PatientResponseDTO> getPatientsWithNPlusOne() {
         // (1) Bắn 1 câu query lấy N bệnh nhân
-        List<Patient> patients = patientRepository.findAllWithCheckUpOptimized();
+        List<Patient> patients = patientRepository.findAll();
 
         // (2) Bắn thêm N câu query bên trong vòng lặp map
         return patients.stream().map(patient -> {
