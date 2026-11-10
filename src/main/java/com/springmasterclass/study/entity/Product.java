@@ -1,7 +1,6 @@
 package com.springmasterclass.study.entity;
 
 import java.math.BigDecimal;
-
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -22,6 +21,9 @@ public class Product {
   private Long id;
   private String name;
   private BigDecimal price;
-  private String category;
   private String status;
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "category_id") 
+  private Category category;
 }
